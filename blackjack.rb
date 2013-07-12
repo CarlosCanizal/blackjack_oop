@@ -212,7 +212,7 @@ def game_start
       puts "NOW PLAYING: #{player.name}.\n\n"
       puts player
       puts dealer
-      while command == 'hit'
+      while commands.include? command
         puts "\nDo you want hit or stay? "
         command = gets.chomp.downcase
 
@@ -244,7 +244,7 @@ end
 
 commands = ["yes","no","y","n"]
 command = 'yes'
-while command == 'yes'
+while commands.include? command
   system("clear")
   game_start
   puts "\n\nDo you want to play again? yes/no"
